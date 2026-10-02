@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AeroCrisp Pro — El Arte de lo Crujiente</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-dim": "#dbdad6",
+            "surface-tint": "#b42901",
+            "on-primary-fixed-variant": "#8a1d00",
+            "on-tertiary-container": "#003422",
+            "secondary": "#5b5e66",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-container": "#f0eeea",
+            "error": "#ba1a1a",
+            "surface": "#fbf9f5",
+            "on-secondary-fixed": "#181c22",
+            "on-secondary-fixed-variant": "#43474e",
+            "on-surface-variant": "#5a413a",
+            "primary-fixed-dim": "#ffb4a2",
+            "primary-fixed": "#ffdad2",
+            "on-tertiary-fixed-variant": "#005236",
+            "inverse-surface": "#30312e",
+            "on-primary-fixed": "#3c0700",
+            "tertiary-container": "#00a975",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#f2f0ec",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-secondary": "#ffffff",
+            "on-background": "#1b1c1a",
+            "surface-variant": "#e4e2de",
+            "secondary-container": "#dfe2eb",
+            "on-tertiary-fixed": "#002113",
+            "primary": "#b42901",
+            "secondary-fixed-dim": "#c3c6cf",
+            "surface-container-low": "#f5f3ef",
+            "on-secondary-container": "#61646c",
+            "outline-variant": "#e3beb6",
+            "background": "#fbf9f5",
+            "surface-container-high": "#eae8e4",
+            "tertiary-fixed": "#6ffbbe",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#dfe2eb",
+            "surface-container-highest": "#e4e2de",
+            "on-primary-container": "#5b1000",
+            "tertiary": "#006c49",
+            "on-error-container": "#93000a",
+            "surface-bright": "#fbf9f5",
+            "primary-container": "#ff5e36",
+            "on-surface": "#1b1c1a",
+            "inverse-primary": "#ffb4a2",
+            "outline": "#8f7069"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "3rem",
+            "space-lg": "1.75rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "display-hero-mobile": ["Outfit"],
+            "headline-md": ["Outfit"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-hero": ["Outfit"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "caption": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Outfit"],
+            "headline-sm": ["Outfit"],
+            "headline-lg": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-tech": ["Space Grotesk"],
+            "label-pill": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-hero-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "800" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-tech": ["13px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "label-pill": ["12px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation (Shared Component Execution) -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-gutter-mobile md:px-margin max-w-7xl mx-auto py-space-sm">
+<!-- Brand Logo / Identity -->
+<a class="flex items-center gap-space-xs group" href="#">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-headline-sm text-headline-sm text-primary dark:text-inverse-primary tracking-tight font-extrabold">AeroCrisp Pro</span>
+</a>
+<!-- Desktop Nav Anchors -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface font-medium transition-colors font-body-sm text-body-sm" href="#tecnologia">Tecnología 360°</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 font-body-sm text-body-sm" href="#recetas">Inspiración Culinaria</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface font-medium transition-colors font-body-sm text-body-sm" href="#modos">Modo Chef</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface font-medium transition-colors font-body-sm text-body-sm" href="#comunidad">Club Gourmet</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-space-sm">
+<a class="bg-primary text-on-primary font-label-pill text-label-pill px-5 py-2.5 rounded-full hover:bg-primary-container transition-colors shadow-sm duration-200" href="#distribuidores">
+          Dónde Comprar
+        </a>
+</div>
+</div>
+</header>
+<main>
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden pt-space-xl pb-20 md:pb-28">
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Text Column -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<!-- In-Stock / Highlight Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-pill text-label-pill font-semibold">Diseño Vanguardista 2024 • Edición Gourmet</span>
+</div>
+<!-- Headline -->
+<h1 class="hidden md:block font-display-hero text-display-hero text-on-surface leading-tight tracking-tight">
+              El arte de lo crujiente, <br/>
+<span class="text-primary">sin una gota de culpa.</span>
+</h1>
+<h1 class="block md:hidden font-display-hero-mobile text-display-hero-mobile text-on-surface leading-tight tracking-tight">
+              El arte de lo crujiente, <br/>
+<span class="text-primary">sin culpa.</span>
+</h1>
+<!-- Editorial Copy -->
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+              Nuestra tecnología de aire ciclónico AeroFlow 360° recrea la textura dorada y crepitante de la fritura tradicional utilizando un 85% menos de grasa. Precisión de alta cocina en tu encimera.
+            </p>
+<!-- Micro-Badges Specification Chips -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-tech text-label-tech">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">autorenew</span>
+                Tecnología AeroFlow 360°
+              </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-tech text-label-tech">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">restaurant</span>
+                Capacidad XL 6.2L
+              </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-tech text-label-tech">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">touch_app</span>
+                Pantalla GlassTouch
+              </span>
+</div>
+<!-- Double Informative CTA -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-md w-full sm:w-auto">
+<a class="w-full sm:w-auto text-center px-8 py-3.5 rounded-full bg-gradient-to-r from-primary-container to-primary text-on-primary font-label-pill text-label-pill shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all" href="#recetas">
+                Explorar Recetas Rápidas
+              </a>
+<a class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-full border border-secondary text-on-surface font-label-pill text-label-pill hover:bg-surface-container transition-colors" href="#distribuidores">
+<span class="material-symbols-outlined" style="font-size: 18px;">storefront</span>
+                Dónde Comprar
+              </a>
+</div>
+<!-- Social Verification Summary -->
+<div class="flex items-center gap-3 pt-space-sm">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-caption text-caption text-secondary">
+<strong class="text-on-surface font-semibold">4.9 / 5.0</strong> por más de 14,000 entusiastas culinarios
+              </p>
+</div>
+</div>
+<!-- Hero Hardware Visual Card -->
+<div class="lg:col-span-5 relative mt-6 lg:mt-0">
+<div class="relative bg-surface-container-lowest rounded-xl p-4 md:p-6 shadow-xl border border-surface-variant overflow-hidden">
+<!-- Subtle Background Radiant Glow -->
+<div class="absolute -right-20 -top-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Appliance Main Image -->
+<div class="relative rounded-lg overflow-hidden h-[380px] md:h-[460px] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A modern matte black AeroCrisp Pro smart air fryer on a luxurious warm marble kitchen counter, golden crispy French fries in the illuminated open basket, high-end culinary photography with warm ember steam rising and professional soft natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnkQj7VUCJwOkDMY_Mwt6gmPbj8dmKAFeChHQG3wEvqklnfmDjPKjcqS6pACl980B1sza_IkomV2a8gXAEPi72HJIlloUPpDqesRBiqp5Mlavb6A_KFY0Eo1ou0aVbgXbCQ_UIbzWSauaPW5MpYthkVF4UeqqssuWB8G5QGCjr0tBZHMmEOG9u8AJPSMEr1Sp69O0qOHMYFMFsIiqIQQzzz-5wYbfhdnB7Du6sT-vT0J8ygLaEGnJM"/>
+<!-- Floating Glass Spec Badge -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md p-4 rounded-DEFAULT border border-white/60 shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mode_heat</span>
+</div>
+<div>
+<p class="font-caption text-caption text-secondary">Rango Térmico</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">40°C — 230°C</p>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div>
+<p class="font-caption text-caption text-secondary">Circulación</p>
+<p class="font-headline-sm text-headline-sm text-primary">3,000 RPM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: MÉTRICAS Y CARACTERÍSTICAS INNOVADORAS -->
+<section class="py-space-xl bg-surface-container-low border-y border-surface-container-high" id="tecnologia">
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="font-label-pill text-label-pill text-primary font-bold">INGENIERÍA AERODINÁMICA</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Diseñada para transformar tu paladar</h2>
+<p class="font-body-md text-body-md text-secondary mt-3">Sin trucos ni aceite en exceso. Solo vórtices térmicos de precisión calibrados al milímetro.</p>
+</div>
+<!-- 4 Metric Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-surface-variant flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="font-display-hero-mobile text-display-hero-mobile text-primary font-extrabold">-85%</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Menos Grasa</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Consigue el crujido irresistible de una freidora industrial utilizando únicamente aire caliente recirculado.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-surface-variant flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<p class="font-display-hero-mobile text-display-hero-mobile text-on-surface font-extrabold">+40%</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Más Rápida</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Doble elemento calefactor cerámico que alcanza temperatura de cocción en solo 90 segundos sin precalentar.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-surface-variant flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">volume_off</span>
+</div>
+<div>
+<p class="font-display-hero-mobile text-display-hero-mobile text-tertiary font-extrabold">&lt;48 dB</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Silencio Ultrasónico</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Motor inverter sin escobillas. Cocina sin interrumpir conversaciones ni la música de fondo en tu hogar.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-surface-variant flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">soap</span>
+</div>
+<div>
+<p class="font-display-hero-mobile text-display-hero-mobile text-on-surface font-extrabold">30 seg</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Limpieza Exprés</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Cesta con revestimiento cerámico de grado médico libre de PTFE/PFOA. Enjuague instantáneo o lavavajillas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: INSPIRACIÓN CULINARIA & RECETAS -->
+<section class="py-space-xl" id="recetas">
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<span class="font-label-pill text-label-pill text-primary font-bold">INSPIRACIÓN CULINARIA</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Qué puedes crear con AeroCrisp</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Platos con estrella Michelin directo a tu mesa en cuestión de minutos.</p>
+</div>
+<div class="hidden sm:flex gap-2">
+<span class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-pill text-label-pill font-medium">Recetas Probadas en Laboratorio</span>
+</div>
+</div>
+<!-- Recipe Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Receta 1: Alitas -->
+<div class="bg-surface-container-lowest rounded-lg border border-surface-variant overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up gourmet photography of crispy honey glazed chicken wings sprinkled with toasted sesame seeds and fresh scallions, warm ambient lighting with vibrant sauce reflections on modern ceramic tableware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD8I8ZZjsAuFYzbH0yyHgHZkzjtSmDddRvFDu1jcz5RZUzFXMG9rfJ7eId_DJPco__JXXZ2wKA7nnyNKZYBwjdTdsmh_hyzoTmMypFJDaSN2UOBbJY3Z3ObCiCZAb6ADIF0Ee4xO7yfVSE1teEZjIRp_w_V5oAIUrGFYdvdbr8_Ujc3BI_WsLJkmPHtgyOW8W7gVrVXFWRduDxvvJVFhDiFhuZV7wpAIGZcLcfL2pP4_Wyucsbc4jl"/>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-tech text-label-tech text-on-surface">
+                20 min • 200°C
+              </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary font-caption text-caption mb-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">speed</span>
+                  Dificultad Fácil
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Alitas glaseadas con miel y sriracha</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Piel extremadamente crujiente y jugo sellado sin necesidad de freír en aceite profundo.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-variant">
+<p class="font-caption text-caption text-primary font-semibold">Tip del Chef:</p>
+<p class="font-caption text-caption text-secondary italic">Seca muy bien la piel con toalla de papel antes de ingresarlas a la cesta 360°.</p>
+</div>
+</div>
+</div>
+<!-- Receta 2: Papas Rústicas -->
+<div class="bg-surface-container-lowest rounded-lg border border-surface-variant overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Golden brown rustic potato wedges seasoned with fresh rosemary sprigs and coarse sea salt crystals in a dark slate bowl, warm culinary studio photography with rich textures and artisan kitchen backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSnOEgQRH0OfHvvtQpeMXtDeMUfNChnC39UNP8DnYeLehLX1pmwhlmht_elKntMQmExGNPDSYITKpy_ylwmG_oZbZX3WpPKZ4NiDqQ15jLcOoE6JLVf5rVVh9j8se7ORm9KWBBf2wubeCEdzTY6fTT2IprpvXhO1jQpMcGh5FmxEP0UszJgQy0kdtNC9YtT55v5BrGQQn0ajhhO8Duu0blyur2C7BYdh7Ys4xfzDCotrKk0Y0ruQeP"/>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-tech text-label-tech text-on-surface">
+                18 min • 190°C
+              </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary font-caption text-caption mb-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">speed</span>
+                  Dificultad Muy Fácil
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Papas rústicas al romero y sal marina</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Interior cremoso como puré y exterior crujiente con apenas 1 cucharadita de aceite de oliva.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-variant">
+<p class="font-caption text-caption text-primary font-semibold">Tip del Chef:</p>
+<p class="font-caption text-caption text-secondary italic">Agita la canasta a los 10 minutos con el aviso acústico 'Shake &amp; Crisp'.</p>
+</div>
+</div>
+</div>
+<!-- Receta 3: Salmón en costra -->
+<div class="bg-surface-container-lowest rounded-lg border border-surface-variant overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet pan-seared salmon fillet topped with a golden herb crust and lemon slice on an elegant light stoneware plate, fresh dill garnish, high-key bright natural lighting and delicate steam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzKfgZjxgnwXdIxzKqvJjBRXeOHbpKZbNdEqztcy_MgXtUyA-mFYReKqGXkW5fegBWkrxlgpAE8N_50dpPVchyMgfF1IUpU2_42iAM2cZoiMClu_UkzGRPZtWzrf-PrrQ-eTbLw8po1wXqZWH9Izynkcv3bSL0MdoWqDNzCwzy2UZhGmb0eqYPgqsOYQEsu552NK4CXbAvz-PaJTWlIiJItG7TjsrmjbshjxXWHspscfjQkc_i-mHW"/>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-tech text-label-tech text-on-surface">
+                12 min • 185°C
+              </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-tertiary font-caption text-caption mb-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">favorite</span>
+                  Opción Saludable
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Salmón sellado en costra de hierbas</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Cocción homogénea que retiene los ácidos grasos omega-3 y crea un gratinado superior.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-variant">
+<p class="font-caption text-caption text-primary font-semibold">Tip del Chef:</p>
+<p class="font-caption text-caption text-secondary italic">Coloca la piel hacia abajo para que quede hiper-crujiente y fácil de desprender.</p>
+</div>
+</div>
+</div>
+<!-- Receta 4: Volcán de Chocolate -->
+<div class="bg-surface-container-lowest rounded-lg border border-surface-variant overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Decadent molten lava chocolate cake cut open with rich warm melted dark chocolate oozing out onto a warm white porcelain plate, dusted with powdered sugar, moody warm luxury dessert photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs82Z3jUpAihrUyvbdzMuVuUduhEDacKkcYATfMwdmBEkELLn-NZb0n8MMZ-ByoAaNdT9YbxOshqpwjK-Xp0Lr874dzUe67lOG9_llbS0VTh0qmI3p32Yv0cXARxliPubg2wi6vM2cqHMuIx_VoY7Du_z5Gq_4ZD1yhowZl0hKtvGGO2N6xfoTA_kmJW8bW5bUzGVIPVYtJtRmbuz6dJJJr2lz0D7Uom2VV0z42iFObixie10GT0A-"/>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-tech text-label-tech text-on-surface">
+                9 min • 175°C
+              </span>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary font-caption text-caption mb-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">cake</span>
+                  Repostería Exprés
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Volcán de chocolate fundido</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Centro líquido perfecto y corona esponjosa. Un postre de restaurante en menos de 10 minutos.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-variant">
+<p class="font-caption text-caption text-primary font-semibold">Tip del Chef:</p>
+<p class="font-caption text-caption text-secondary italic">Usa moldes individuales de silicona o cerámica aptos para alta temperatura.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: EXPERIENCIA MODO CHEF INTELIGENTE -->
+<section class="py-space-xl bg-inverse-surface text-inverse-on-surface relative overflow-hidden" id="modos">
+<!-- Ambient Thermal Glow -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,94,54,0.18),transparent_60%)] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5">
+<span class="font-label-pill text-label-pill text-primary-fixed font-bold tracking-wider">PANEL GLASSTOUCH™</span>
+<h2 class="font-headline-lg text-headline-lg text-white mt-2">8 Modos Automáticos con un solo toque</h2>
+<p class="font-body-md text-body-md text-surface-container mt-4 leading-relaxed">
+              Olvídate de calcular temperaturas o tiempos. Los algoritmos térmicos de AeroCrisp Pro ajustan dinámicamente la velocidad del ventilador y los ciclos de convección según el tipo de alimento.
+            </p>
+<div class="mt-8 space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">check</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-white">Sensores Ópticos de Humedad</h4>
+<p class="font-body-sm text-body-sm text-surface-variant">Evita que la carne se reseque manteniendo un exterior dorado y un corazón jugoso.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">check</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-white">Aviso Acústico 'Shake'</h4>
+<p class="font-body-sm text-body-sm text-surface-variant">Te avisa en el momento exacto para voltear y garantizar un dorado 100% simétrico.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Presets Interactive Grid -->
+<div class="lg:col-span-7">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">lunch_dining</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Carnes &amp; Smash</p>
+<p class="font-caption text-caption text-surface-variant mt-1">205°C • 14 min</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">bakery_dining</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Papas Fritas</p>
+<p class="font-caption text-caption text-surface-variant mt-1">195°C • 18 min</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">set_meal</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Pescados</p>
+<p class="font-caption text-caption text-surface-variant mt-1">180°C • 10 min</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">cake</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Repostería</p>
+<p class="font-caption text-caption text-surface-variant mt-1">160°C • 25 min</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">nutrition</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Vegetales</p>
+<p class="font-caption text-caption text-surface-variant mt-1">190°C • 12 min</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">dry</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Deshidratado</p>
+<p class="font-caption text-caption text-surface-variant mt-1">55°C • 4 horas</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">microwave</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Recalentar Crujiente</p>
+<p class="font-caption text-caption text-surface-variant mt-1">175°C • 5 min</p>
+</div>
+<div class="bg-surface-dim/10 border border-white/10 rounded-lg p-4 text-center hover:bg-white/15 transition-all">
+<span class="material-symbols-outlined text-primary-fixed mb-2" style="font-size: 32px;">local_pizza</span>
+<p class="font-headline-sm text-headline-sm text-white text-base">Pizzas &amp; Masas</p>
+<p class="font-caption text-caption text-surface-variant mt-1">200°C • 8 min</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: TESTIMONIOS Y PRUEBA SOCIAL -->
+<section class="py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin">
+<div class="text-center max-w-xl mx-auto mb-14">
+<span class="font-label-pill text-label-pill text-primary font-bold">OPINIONES DE LA COMUNIDAD</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">La revolución en las cocinas reales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonio 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-surface-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-primary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+                "Había probado otras dos marcas conocidas y siempre terminaban oliendo a plástico o dejando las papas blandas por partes. El flujo de AeroCrisp Pro es otra liga; doró un pollo entero en 35 minutos con textura perfecta."
+              </p>
+</div>
+<div class="mt-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">
+                MC
+              </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-sm">Mateo Castillo</p>
+<p class="font-caption text-caption text-secondary">Chef &amp; Creador de Contenido</p>
+</div>
+</div>
+</div>
+<!-- Testimonio 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-surface-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-primary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+                "Tener la capacidad XL de 6.2L me solucionó la cena de mis tres hijos sin tener que hacer tandas eternas. Además, la limpieza cerámica es real: un chorrito de agua tibia y queda impecable."
+              </p>
+</div>
+<div class="mt-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">
+                VR
+              </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-sm">Valentina Ramos</p>
+<p class="font-caption text-caption text-secondary">Madre y Foodie entusiasta</p>
+</div>
+</div>
+</div>
+<!-- Testimonio 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-surface-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-primary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+                "El diseño mate es bellísimo. Se ve como una pieza de arte minimalista en mi cocina de concepto abierto y apenas hace ruido cuando cocina a 200°C."
+              </p>
+</div>
+<div class="mt-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">
+                JS
+              </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-sm">Javier Serrano</p>
+<p class="font-caption text-caption text-secondary">Arquitecto</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: PUNTOS AUTORIZADOS / DÓNDE COMPRAR -->
+<section class="py-space-xl bg-surface-container-low" id="distribuidores">
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin text-center">
+<span class="font-label-pill text-label-pill text-primary font-bold">RED DE DISTRIBUCIÓN OFICIAL</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Encuéntrala en las mejores tiendas</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto mt-3">
+          AeroCrisp Pro se comercializa exclusivamente a través de distribuidores autorizados departamentales y casas especializadas de electrodomésticos gourmet.
+        </p>
+<!-- Official Retailers Badges -->
+<div class="flex flex-wrap justify-center items-center gap-6 mt-10">
+<div class="px-8 py-5 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">domain</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Liverpool Gourmet</span>
+</div>
+<div class="px-8 py-5 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">apartment</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">El Palacio de Hierro</span>
+</div>
+<div class="px-8 py-5 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">store</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Williams-Sonoma</span>
+</div>
+<div class="px-8 py-5 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">local_mall</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Falabella Retail</span>
+</div>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-semibold font-body-sm text-body-sm hover:underline" href="#comunidad">
+<span>Solicitar catálogo de distribuidores locales en tu ciudad</span>
+<span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION: NEWSLETTER / COMUNIDAD GASTRONÓMICA -->
+<section class="py-space-xl bg-surface-container-highest" id="comunidad">
+<div class="max-w-4xl mx-auto px-gutter-mobile md:px-margin text-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu_book</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Únete al Club AeroCrisp</h2>
+<p class="font-body-md text-body-md text-secondary mt-3 max-w-xl mx-auto">
+          Recibe cada viernes 3 recetas exclusivas creadas por chefs para tu freidora de aire, trucos de temperatura y la guía mensual de eventos culinarios.
+        </p>
+<!-- Newsletter Subscription Form -->
+<form class="mt-8 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('¡Gracias por unirte al Club AeroCrisp! Revisa tu correo con el recetario de bienvenida.');">
+<input class="flex-1 px-5 py-3.5 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-sm text-body-sm" placeholder="Introduce tu correo electrónico" required="" type="email"/>
+<button class="px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-pill text-label-pill hover:bg-primary-container transition-colors shadow-sm" type="submit">
+            Quiero Recetas
+          </button>
+</form>
+<p class="font-caption text-caption text-secondary mt-4">
+          Sin spam. Solo gastronomía de alto nivel y amor por lo crujiente. Puedes darte de baja en cualquier momento.
+        </p>
+</div>
+</section>
+</main>
+<!-- FOOTER (Shared Component Execution) -->
+<footer class="docked full-width bottom bg-surface-container-highest dark:bg-inverse-surface border-t border-surface-variant/40">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-gutter-mobile md:px-margin max-w-7xl mx-auto py-space-lg gap-space-md">
+<!-- Brand & Copyright -->
+<div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+<span class="font-headline-sm text-headline-sm text-primary dark:text-inverse-primary font-bold">AeroCrisp Pro</span>
+<span class="hidden sm:inline text-secondary">•</span>
+<p class="font-caption text-caption text-on-surface-variant dark:text-surface-variant">
+          © 2024 AeroCrisp Culinary Technologies. Todos los derechos reservados.
+        </p>
+</div>
+<!-- Links defined in Shared Components JSON -->
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#tecnologia">Tecnología 360°</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#recetas">Recetas Semanales</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#distribuidores">Distribuidores Oficiales</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#comunidad">Soporte Técnico</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#comunidad">Privacidad y Garantía</a>
+</div>
+</div>
+</footer>
+</body></html>
